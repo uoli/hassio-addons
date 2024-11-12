@@ -2,8 +2,7 @@ ARG BUILD_FROM
 # hadolint ignore=DL3006
 FROM $BUILD_FROM
 
-RUN apt-get update && apt-get install -y \
-    dumb-init
+RUN apk update && apk add dumb-init
 
 RUN curl -J -L -o /tmp/bashio.tar.gz \
         "https://github.com/hassio-addons/bashio/archive/v0.7.1.tar.gz" \
@@ -14,7 +13,7 @@ RUN curl -J -L -o /tmp/bashio.tar.gz \
     \
     && mv /tmp/bashio/lib /usr/lib/bashio \
     && ln -s /usr/lib/bashio/bashio /usr/bin/bashio \
-    && rm -fr /tmp/* 
+    && rm -fr /tmp/*
 
 RUN usermod -d /config-internal abc \
     && sed -i "s|/config|/config-internal|g" /etc/openvpn/adjustConfigs.sh \

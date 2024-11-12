@@ -2,7 +2,7 @@ ARG BUILD_FROM
 # hadolint ignore=DL3006
 FROM $BUILD_FROM
 
-RUN apk update && apk add dumb-init
+RUN apt-get update && apt-get install -y dumb-init
 
 RUN curl -J -L -o /tmp/bashio.tar.gz \
         "https://github.com/hassio-addons/bashio/archive/v0.7.1.tar.gz" \

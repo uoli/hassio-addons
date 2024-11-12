@@ -6,7 +6,7 @@
     "build_from": {
         "armhf": "haugene/transmission-openvpn:5.3",
         "aarch64": "haugene/transmission-openvpn:5.3",
-        "amd64": "haugene/transmission-openvpn:5.3",
+        "amd64": "haugene/transmission-openvpn:5.3"
     },
     "squash": false,
     "args": {}

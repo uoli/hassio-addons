@@ -1,0 +1,1 @@
+Copied from https://github.com/petersendev/hassio-addons/commit/ffcfcf992a2c4e56924e6e252c69e6495ae660a0 and added armv7

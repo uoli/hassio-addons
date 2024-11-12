@@ -29,4 +29,4 @@ RUN usermod -d /config-internal abc \
 # copy local files
 COPY root/ /
 RUN chmod +x /customstart.sh
-CMD ["dumb-init", "/customstart.sh"]
+CMD ["bash", "/customstart.sh"]
